@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta name="description" content="An introduction to the HTML language">
+  <meta name="author" content="Pim de Wit <pim@pdw.io>">
+  <meta name="keywords" content="HTML, tutorial, introduction, programming">
+
+  <title>This is the document's title</title>
+</head>
+<body>
+  <h1>How to set up an HTML document.</h1>
+  <h2>The DOCTYPE</h2>
+  <p>The DOCTYPE, found at <code>line 1</code> of this document, basically signals the browser that this document is indeed an HTML document.</p>
+  <p>This is necessary because there are a couple languages that look a lot like HTML, and we want to make sure the browser interprets it as HTML rather than something else.</p>
+
+  <h2>The &lt;html&gt; element</h2>
+  <p>The &lt;html&gt; element represents the <strong>root</strong> of an HTML document, that's why it's also referred to as the <i>root element</i>. All other elements must be descendants of this element, no matter what.</p>
+  <p>That said, there are only 2 elements that are allowed as <strong>direct</strong> descendants: The &lt;head&gt; and the &lt;body&gt;</p>
+
+  <h2>The <code>&lt;head&gt;</code></h2>
+  <p>The Head is the part of an HTML document that contains metadata about that document, such as author, description, and links to CSS or JavaScript files that should be applied to the HTML.</p>
+  <p>Think of it as the first couple pages of a book. It names the author, year of release, the publisher, a summary etc.</p>
+
+  <h3>Meta tags</h3>
+  <p>We established that meta tags exist to give the browser information about the document. However, they are not always directly relevant to the <strong>contents</strong> of the page.</p>
+  <p>For example: <code>&lt;meta charset="utf-8"&gt;</code> signals the browser on what character encoding to use. <a href="https://developer.mozilla.org/en-US/docs/Glossary/UTF-8" target="_blank">UTF-8</a> is the standard for the web, and you will use this character set 99.9999% of the times.</p>
+
+  <p>Try to comment out the <code>charset</code> meta tag, and look at the following:</p>
+  <blockquote>???</blockquote>
+
+  <h2>The <code>&lt;body&gt;</code></h2>
+  <p>The &lt;body&gt; represents the content of an HTML document. We learned that <strong>the &lt;head&gt; communicates to the browser</strong>. <strong>The &lt;body&gt; communicates towards your audience; the users</strong>.</p>
+  <p>This means all text, images, and other data you want to display should always be in the body.</p>
+</body>
+</html>
