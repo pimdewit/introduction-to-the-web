@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta name="description" content="Learning about HTML Elements">
+  <meta name="author" content="Pim de Wit <pim@pdw.io>">
+  <meta name="keywords" content="HTML, tutorial, introduction, programming, elements">
+  
+  <title>2.2 Elements</title>
+</head>
+<body>
+
+  <h1>Elements</h1>
+
+  <h2 color="red">No TL;DR this time, sorry</h2>
+
+  <h2>Before we kick off, a warning.</h2>
+  <p>You may have ended up at <a href="https://www.w3schools.com/" target="_blank">https://www.w3schools.com/</a> after googling anything HTML/CSS/Javascript related.</p>
+  <p><strong>Do not use W3Schools</strong>. This site has amazing <abbr title="Search Engine Optimisation">SEO</abbr>, and will almost definitely show up at the top of the google results. However W3Schools is well known within the community for <strong>explaining things poorly</strong>.</p>
+  <p>Mozilla (creators of Firefox) have created MDN, The Mozilla Developer Network. This is <strong>the</strong> place to know more about anything technology-for-the-web related.</p>
+  <p>Whenever I want to find out about an HTML element for example I would google: "mdn h1 element". This makes sure I end up on MDN rather than W3Schools.</p>
+
+  <hr>
+
+  <h2>What is an HTML element?</h2>
+  <p>An element is a <strong>component</strong> of the page. There are loads of pre-defined HTML elements, and they all have their own function. Putting all these components together will (hopefully) result in a </p>
+  <p>For example, the <code>&lt;p&gt;</code> element represents a paragraph. A <code>&lt;nav&gt;</code> element represents the menu (for navigation) of a page.</p>
+  <p>Let's have a look at some other interesting HTML elements.</p>
+
+
+  <table border="1" cellspacing="0" border-collapse="true">
+    <tr>
+      <td><code>&lt;header&gt;</code></td>
+      <td>The header of a section. This is often used if the heading of a section is more than just a title.</td>
+    </tr>
+    <tr>
+      <td><code>&lt;img&gt;</code></td>
+      <td>Displays an image!</td>
+    </tr>
+    <tr>
+      <td><code>&lt;article&gt;</code></td>
+      <td><q>[This element] represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable</q> - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article" target="_blank">Quoted from MDN</a></td>
+    </tr>
+    <tr>
+      <td><code>&lt;main&gt;</code></td>
+      <td>This element shows the main content of the document. There may be some elements on the page that do not have anything to do with the objective of the page.<br>for example: Let's say we got a blogging site. The navigation (menu) of my website has absolutely nothing to do with my 800 word article about Crash Bandicoot. The article should be wrapped in a <code>&lt;main&gt;</code>, but the navigation should not.</td>
+    </tr>
+  </table>
+
+  <h3>What happens if there is no dedicated element for my custom functionality?</h3>
+  <p>If none of the existing tags seem to be suitable for your specific scenario, that's where we have to go for backup-strats.</p>
+  <p>The infamous <code>&lt;div&gt;</code> element is a "blank" element. There are no expectations or functionalities tied with it. It does nothing. this is good because this means we can tie our own functionalities to it without confusing the browser.</p>
+
+  <blockquote>Note: <code>&lt;div&gt;</code> elements should only be used as a worst case scenario.</blockquote>
+
+  <h2>HTML Element Glossary</h2>
+  <p>There are a lot of technical terms being thrown around, and they may seem confusing if you are not aware of the lingo. We got "tags", "elements", "components", "attributes", and the list goes on. Let's deconstruct an element, and see what different parts an HTML element really has.</p>
+
+  <p>Let's deconstruct the following: <strong><code>&lt;button title="Click me and nothing will happen"&gt;Hello World&lt;/button&gt;</code></strong></p>
+
+  <table border="1" cellspacing="0" border-collapse="true">
+    <tr>
+      <td>&lt;button&gt;</td>
+      <td>(opening) TAG</td>
+    </tr>
+    <tr>
+      <td>title</td>
+      <td>ATTRIBUTE</td>
+    </tr>
+    <tr>
+      <td>Click me and nothing will happen</td>
+      <td>ATTRIBUTE VALUE</td>
+    </tr>
+    <tr>
+      <td>Hello World</td>
+      <td>TEXTNODE</td>
+    </tr>
+    <tr>
+      <td>&lt;/button&gt;</td>
+      <td>(closing) TAG</td>
+    </tr>
+    <tr>
+      <td>&lt;button title="Click me and nothing will happen"&gt;Hello World&lt;/button&gt;</td>
+      <td>ELEMENT</td>
+    </tr>
+  </table>
+
+  <p>Let's do one more: <strong><code>&lt;img src="my-image.jpg" alt="An image of my beautiful face"&gt;</code></strong></p>
+
+  <table border="1" cellspacing="0" border-collapse="true">
+    <tr>
+      <td>&lt;img&gt;</td>
+      <td>(opening) TAG</td>
+    </tr>
+    <tr>
+      <td>src</td>
+      <td>ATTRIBUTE</td>
+    </tr>
+    <tr>
+      <td>my-image.jpg</td>
+      <td>ATTRIBUTE VALUE</td>
+    </tr>
+    <tr>
+      <td>alt</td>
+      <td>ATTRIBUTE</td>
+    </tr>
+    <tr>
+      <td>An image of my beautiful face</td>
+      <td>ATTRIBUTE VALUE</td>
+    </tr>
+    <tr>
+      <td>&lt;img src="my-image.jpg" alt="An image of my beautiful face"&gt;</td>
+      <td>ELEMENT</td>
+    </tr>
+  </table>
+
+  <blockquote>Note: the <code>&lt;img&gt;</code> element does not have a closing tag because this element is not allowed to have descendants. (Just like the <code>&lt;meta&gt;</code> elements we saw before).</blockquote>
+
+  <h2>Semantics (!!!)</h2>
+  <p>All predefined HTML elements exist to keep things semantically correct. Good semantics allow the browser to <strong>understand</strong> how your page is structured, and how the content is layed out.</p>
+  <blockquote><strong>If the browser understands your document, it means that the browser will be able to translate it back to the users.</strong></blockquote>
+
+  <a href="semantics.html">Let's have a look at a semantic web page!</a>
+</body>
+</html>
