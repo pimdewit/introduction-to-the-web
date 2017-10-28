@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta name="description" content="Learning about HTML Elements">
+  <meta name="author" content="Pim de Wit <pim@pdw.io>">
+  <meta name="keywords" content="HTML, tutorial, introduction, programming, elements">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <title>1.3 CSS</title>
+</head>
+<body>
+
+  <main>
+    <h1>Cascading Style Sheets</h1>
+    <p>Holy shit, we are not looking at that eye-straining browser default design anymore, you could almost say it looks
+      <i>nice</i>. We altered the look & feel of our document by using CSS!</p>
+    <p><q>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written
+    in a markup language.</q> (from Wikipedia).<br>
+    Let's translate this to human - CSS is a language used to visually enhance the presentation of your HTML document.</p>
+
+    <h2>How does it work?</h2>
+    <p>CSS is very simple! and it is loads of fun to play around with it.</p>
+    <ol>
+      <li>
+        <p>Create a new folder on a location you will remember, perhaps (dare I say it) Desktop?, folder-name does not matter!
+          <small>If you really can't decide on a folder-name, then lets call it xx-my_awesome_project-xx</small></p>
+      </li>
+      <li>
+        <p>Copy <a href="../2-elements/" target="_blank">semantics.html</a> from the previous chapter and paste the file into your newly-made folder!</p>
+      </li>
+      <li>
+        <p>Create a new file in your directory, call it <code>my-style.css</code>. Your folder-structure should now look like the following:</p>
+        <blockquote>
+          <code>
+            <strong>YourNewlyCreatedFolder</strong><br>
+            &nbsp;|-semantics.html<br>
+            &nbsp;|-my-style.css
+          </code>
+        </blockquote>
+      </li>
+      <li>
+        <p>Within <code>my-style.css</code> type the following: <code>body { background-color: red; }</code>. We have written our first styles!</p>
+      </li>
+      <li><p>Refresh your HTML file, you will notice the background is... not red</p></li>
+      <li><p>We still need to "link" the file! Luckily the <code>&lt;head&gt;</code> can request this for us! In order to request the file, put the following in your document's <code>&lt;head&gt;</code>: <code>&lt;link rel="stylesheet" href="my-style.css"&gt;</code></p></li>
+    </ol>
+  </main>
+
+</body>
+</html>

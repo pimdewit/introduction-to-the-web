@@ -1,0 +1,11 @@
+body {
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased; /* Webkit font smoothing allows Mac OS to have nicer font aliasing. */
+
+  line-height: 2;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+}
