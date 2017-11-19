@@ -1,0 +1,22 @@
+### Challenge 1
+
+A big part of "being a programmer" is knowing how to google.
+So I am going to throw you guys into the deep, and you can google your way out.
+
+Create a rough HTML/CSS version of the image located in assets/, called design.png
+
+Feel free to google, copy and paste whatever you like,
+as long as your final product looks somewhat similar to the image in the assets folder.
+
+Don't worry about typography, feel free to use Times new Roman and Arial.
+Don't worry about images, feel free to use random background-colours.
+This is all about LAYOUT. ٩(◕‿◕)۶
+
+
+I have created an HTML file and linked a CSS file to it for you to work from, gl.
+
+keywords for google: flexbox, css-grid, flexbox center box
+
+LEGENDARY MODE:
+
+Do all layout-related styles using CSS-GRID (https://css-tricks.com/snippets/css/complete-guide-grid/).
