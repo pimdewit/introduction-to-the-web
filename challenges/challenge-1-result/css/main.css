@@ -1,0 +1,249 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+/** I'm overwriting the browsers button styles here */
+button {
+  border: 0;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+
+  cursor: pointer;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+
+  margin: 0;
+
+  font-family: sans-serif;
+  font-size: 1em;
+  line-height: 2;
+
+  background-image: linear-gradient(to left top, #f5aa92, #ffd5b7);
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  display: flex; /** Set the layout mode to flexbox. */
+  align-items: center; /* Center the content vertically. */
+
+  min-height: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100vh;
+
+  margin: 0 auto; /* Horizontally center this element */
+
+  background-color: #fff;
+}
+
+/** If the minimum size is 500, apply the following styles. */
+@media (min-width: 840px) {
+  .container {
+    width: 90%;
+    min-height: initial; /** Initial resets the value to the browser default! */
+
+    /** Create a 2 column layout, each columns being 50% wide. */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+  }
+}
+
+.article {
+  padding: 48px;
+
+  color: rgba(0, 0, 0, .4);
+}
+
+
+/* -------------------
+ HEADER
+ */
+
+.article__header {
+  display: flex;
+  align-items: center; /** Vertically center the nav and the button with eachother */
+  justify-content: space-between;
+
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(230, 94, 47, 0.16);
+}
+
+.article__favourite {
+  /** Make sure this element doesnt get squished when the nav is too long */
+  flex-shrink: 0;
+
+  width: 32px;
+  height: 32px;
+
+  /** Add some whitespace to the left hand side so the text doesn't get awkwardly close to the button */
+  margin-left: 16px;
+
+  background-color: red;
+}
+
+.article__navigation__back {
+  color: #f7ae94;
+
+  text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 200ms;
+}
+.article__navigation__back:hover {
+  color: #dc8b6e;
+}
+
+
+/* -------------------
+ BODY
+ */
+
+.article__body {
+  margin: 4em 0 2em;
+}
+
+.article__body__title {
+  font-family: serif;
+  font-size: 3em;
+  font-weight: 100;
+  letter-spacing: 3px;
+  line-height: 1.1;
+  color: #191716;
+
+  margin: .5em 0 0;
+}
+
+.article__body__subtitle {
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+.article__body__divider {
+  border: 0; /** Remove the browser default styles */
+
+  width: 48px;
+  height: 1px;
+
+  margin: 16px 0;
+
+  background-color: rgba(230, 94, 47, 0.16);
+}
+
+.article__body__price {
+  color: #191716;
+}
+
+
+/* -------------------
+ FOOTER
+ */
+
+.article__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article__footer__button {
+  padding: 20px 40px;
+
+  font-size: 1em;
+  color: #fff;
+
+  background-color: #ec734a;
+
+  border-radius: 999px;
+
+  box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+
+  transition-property: box-shadow, background-color, transform;
+  transition-duration: 200ms;
+}
+.article__footer__button:hover,
+.article__footer__button:focus {
+  background-color: #ca552d;
+
+  transform: scale(1.02);
+
+  box-shadow: 0 2px 8px 1px rgba(0, 0, 0, .3);
+}
+.article__footer__button:active {
+  background-color: #ec734a;
+
+  transform: scale(.98);
+
+  transition-duration: 50ms;
+}
+
+
+/* -------------------
+ GALLERY
+ */
+
+.image {
+  position: relative;
+
+  grid-row: 1;
+
+  width: 100%;
+  min-height: 40vh;
+
+  background-color: rgba(0, 0, 0, .05);
+  background-image: url('../assets/bouquet.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 840px) {
+  .image {
+    grid-row: initial; /** Initial resets the value to the browser default! */
+  }
+}
+
+
+.pagination {
+  position: absolute;
+  width: 100%;
+  bottom: 32px;
+  left: 0;
+
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination__bullet {
+  width: 10px;
+  height: 10px;
+
+  background-color: rgba(255, 255, 255, .4);
+
+  border-radius: 99px;
+
+  margin: 0 8px;
+
+  transition-property: background-color, transform;
+  transition-duration: 200ms;
+}
+.pagination__bullet:hover {
+  background-color: #fff;
+  transform: scale(1.2);
+}
+
+.pagination__bullet--active {
+  background-color: #fff;
+}
